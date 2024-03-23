@@ -1,19 +1,14 @@
-﻿public class Penjumlahan
+﻿using System.Numerics;
+
+class Penjumlahan
 {
-    public void JumlahTigaAngka<T>(T x, T y, T z) where T : TAdditionOperators<T,T,T>
+    public static T JumlahTigaAngka<T>(T x, T y, T z) where T : IAdditionOperators<T, T, T>
     {
-        return = (x + y + z);
+        return x + y + z;
     }
 
+    static void Main(String[] args)
     {
-    static void Main()
-    {
-        Penjumlahan penjumlahan = new Penjumlahan();
-        int x, y, z;
-        x = 13;
-        y = 2;
-        z = 22;
-
-        Console.WriteLine(JumlahTigaAngka<int>(x, y, z));
+        Console.WriteLine(JumlahTigaAngka<int>(13, 22, 23));
     }
 }
