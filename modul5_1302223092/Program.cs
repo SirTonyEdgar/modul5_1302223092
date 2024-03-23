@@ -1,14 +1,11 @@
 ﻿public class Penjumlahan
 {
-    public void JumlahTigaAngka<T>(T x, T y, T z)
+    public void JumlahTigaAngka<T>(T x, T y, T z) where T : TAdditionOperators<T,T,T>
     {
-        T store;
-        store = (x + y + z);
+        return = (x + y + z);
     }
-}
 
-class Program
-{
+    {
     static void Main()
     {
         Penjumlahan penjumlahan = new Penjumlahan();
@@ -17,6 +14,6 @@ class Program
         y = 2;
         z = 22;
 
-        Console.WriteLine(penjumlahan.JumlahTigaAngka(x, y, z));
+        Console.WriteLine(JumlahTigaAngka<int>(x, y, z));
     }
 }
